@@ -1,13 +1,11 @@
 <?php
 include 'config.php';
 
-
 header('Content-Type: application/json');
 header('AccessControl-Allow-Origin: *');
 
 //decoding json format to array format
 $data = json_decode(file_get_contents('php://input'), true);
-
 
 $student_id = $data['stuid'];
 $sql = "SELECT * FROM students WHERE id = $student_id";
