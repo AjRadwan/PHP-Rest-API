@@ -98,11 +98,11 @@
             $.each(data, function(key, value){
             $("#load-table").append("<tr>"
                 +"<td>"+ value.id+ "</td>" +
-                +"<td>"+ value.name+ "</td>" +
-                +"<td>"+ value.age+ "</td>" +
-                +"<td>"+ value.city+ "</td>" +
-                +"<td><button class='edit-btn' data-eid='"+value.id+"'>Edit</button></td>" +
-                +"<td><button class='delete-btn' data-id='"+value.id+"'>Delete</button></td>" +
+                "<td>"+ value.name+ "</td>" +
+                "<td>"+ value.age+ "</td>" +
+                "<td>"+ value.city+ "</td>" +
+                "<td><button class='edit-btn' data-eid='"+value.id+"'>Edit</button></td>" +
+                "<td><button class='delete-btn' data-id='"+value.id+"'>Delete</button></td>" +
             "</tr>");
             });
         }
