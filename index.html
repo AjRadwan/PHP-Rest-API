@@ -120,7 +120,23 @@
   //Fetch Single Record : Show in Modal Box
   $(document).on('click', ".edit-btn", function(){
       $("#modal").show();
-  })
+      let studentID = $(this).data('eid');
+      let obj = {stuid : studentID};
+      let Myjson = JSON.stringify(obj);
+      console.log(Myjson);
+
+      $.ajax({
+        url: "http://localhost/API/api-fetch-single.php",
+       type: "POST",
+       data : Myjson,
+       success: function(data){
+          $("#edit-id").val(data[0].id);
+          $("#edit-name").val(data[0].name);
+          $("#edit-age").val(data[0].age);
+          $("#edit-city").val(data[0].city);
+       }
+      });
+  });
 
   //Hide Modal Box
  $("#close-btn").on('click', function(){
